@@ -1,0 +1,4702 @@
+{
+  "output": {
+    "engineVersion": "0.1.0",
+    "createdAt": "2026-10-11T12:00:00Z",
+    "female": {
+      "id": "dam",
+      "name": "Matriz",
+      "registration": "",
+      "sex": "female",
+      "status": "active",
+      "breedName": "",
+      "isDemo": false
+    },
+    "profile": {
+      "id": "p",
+      "name": "Golden",
+      "isDemo": true,
+      "demoNotice": "DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA",
+      "description": "",
+      "traits": [
+        {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "weight": 40,
+          "direction": "",
+          "idealMin": null,
+          "idealMax": null,
+          "targetTolerance": null,
+          "required": false
+        },
+        {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "weight": 25,
+          "direction": "",
+          "idealMin": null,
+          "idealMax": null,
+          "targetTolerance": null,
+          "required": false
+        },
+        {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "weight": 15,
+          "direction": "",
+          "idealMin": null,
+          "idealMax": null,
+          "targetTolerance": null,
+          "required": false
+        },
+        {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "weight": 20,
+          "direction": "",
+          "idealMin": null,
+          "idealMax": null,
+          "targetTolerance": 10,
+          "required": false
+        }
+      ],
+      "filters": {
+        "requireStock": true,
+        "minDoses": 0,
+        "maxUnitCost": null,
+        "minAccuracy": null,
+        "excludeDirectAncestors": false,
+        "ancestorGenerations": 3
+      },
+      "normalization": "auto",
+      "minCoverage": 1,
+      "complementarity": {
+        "maxBonusPoints": 10
+      },
+      "penalties": {
+        "lowAccuracy": {
+          "threshold": 0.6,
+          "maxPoints": 5
+        }
+      }
+    },
+    "bases": [
+      {
+        "traitCode": "WW",
+        "evaluationType": "DEP",
+        "basis": {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "program": "SYN",
+          "release": "r1",
+          "geneticBase": "base-A",
+          "breedCode": "NEL",
+          "unit": "kg"
+        },
+        "candidates": 3,
+        "eligible": 4,
+        "damMatches": true,
+        "reason": "Base com mais candidatos avaliados (3 de 4)",
+        "alternatives": [
+          {
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "candidates": 3
+          },
+          {
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "OTHER",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "candidates": 1
+          }
+        ]
+      },
+      {
+        "traitCode": "YW",
+        "evaluationType": "DEP",
+        "basis": {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "program": "SYN",
+          "release": "r1",
+          "geneticBase": "base-A",
+          "breedCode": "NEL",
+          "unit": "kg"
+        },
+        "candidates": 3,
+        "eligible": 4,
+        "damMatches": true,
+        "reason": "Base com mais candidatos avaliados (3 de 4)",
+        "alternatives": [
+          {
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "candidates": 3
+          }
+        ]
+      },
+      {
+        "traitCode": "SCS",
+        "evaluationType": "DEP",
+        "basis": {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "program": "SYN",
+          "release": "r1",
+          "geneticBase": "base-A",
+          "breedCode": "NEL",
+          "unit": "kg"
+        },
+        "candidates": 3,
+        "eligible": 4,
+        "damMatches": true,
+        "reason": "Base com mais candidatos avaliados (3 de 4)",
+        "alternatives": [
+          {
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "candidates": 3
+          }
+        ]
+      },
+      {
+        "traitCode": "BW",
+        "evaluationType": "DEP",
+        "basis": {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "program": "SYN",
+          "release": "r1",
+          "geneticBase": "base-A",
+          "breedCode": "NEL",
+          "unit": "kg"
+        },
+        "candidates": 3,
+        "eligible": 4,
+        "damMatches": true,
+        "reason": "Base com mais candidatos avaliados (3 de 4)",
+        "alternatives": [
+          {
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "candidates": 3
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "bull": {
+          "id": "a",
+          "name": "Alfa",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "calculated",
+        "rank": 1,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 8,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": 0.8,
+            "percentile": 80,
+            "score": 80,
+            "method": "percentile",
+            "transformation": "percentil 80,00 → 80,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0.4,
+            "contribution": 32,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Alfa: DEP de WW = 8,00 kg (Synthetic 1; programa SYN, release r1). percentil 80,00 → 80,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": []
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 12,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 84.1344746068543,
+            "method": "zscore",
+            "transformation": "z = (12,00 − 10,00)/2,00 = 1,00 ; score = 84,13",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0.25,
+            "contribution": 21.033618651713574,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Alfa: DEP de YW = 12,00 kg (Synthetic 1; programa SYN, release r1). z = (12,00 − 10,00)/2,00 = 1,00 ; score = 84,13.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 3,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 30,
+            "score": 70,
+            "method": "percentile",
+            "transformation": "percentil 30,00 → 70,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0.15,
+            "contribution": 10.5,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Alfa: DEP de SCS = 3,00 kg (Synthetic 1; programa SYN, release r1). percentil 30,00 → 70,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 43,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 70,
+            "method": "target_range",
+            "transformation": "valor 43,00 a 3,00 da faixa [30,00, 40,00]; tolerância 10,00 → 70,00",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0.2,
+            "contribution": 14,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Alfa: DEP de BW = 43,00 kg (Synthetic 1; programa SYN, release r1). valor 43,00 a 3,00 da faixa [30,00, 40,00]; tolerância 10,00 → 70,00.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "calculated",
+          "points": 3.3820180183563906,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 80,
+              "damScore": 40,
+              "gain": 0.4,
+              "weight": 0.4,
+              "points": 1.6,
+              "explanation": "Score do touro 80,00, da matriz 40,00 ⇒ ganho 0,40; pontos = 10,00 × 0,40 × 0,40 = 1,60.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 84.1344746068543,
+              "damScore": 30.853753872598688,
+              "gain": 0.532807207342556,
+              "weight": 0.25,
+              "points": 1.33201801835639,
+              "explanation": "Score do touro 84,13, da matriz 30,85 ⇒ ganho 0,53; pontos = 10,00 × 0,25 × 0,53 = 1,33.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 70,
+              "damScore": 40,
+              "gain": 0.3,
+              "weight": 0.15,
+              "points": 0.44999999999999996,
+              "explanation": "Score do touro 70,00, da matriz 40,00 ⇒ ganho 0,30; pontos = 10,00 × 0,15 × 0,30 = 0,45.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 70,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.2,
+              "points": 0,
+              "explanation": "Score do touro 70,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,20 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Bônus pela melhora do touro sobre a matriz, nas características em que ambos têm avaliação na mesma base.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "calculated",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": {
+          "base": 77.53361865171357,
+          "complementarity": 3.3820180183563906,
+          "penalties": 0,
+          "unclamped": 80.91563667006996,
+          "final": 80.91563667006996,
+          "clamped": false,
+          "coverage": 1,
+          "formula": "final = limitar(base + complementaridade − penalidades, 0, 100) ; base = Σ(score × peso_normalizado)"
+        },
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      {
+        "bull": {
+          "id": "b",
+          "name": "Beta",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "calculated",
+        "rank": 2,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 5.5,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": 0.4,
+            "percentile": 55,
+            "score": 55,
+            "method": "percentile",
+            "transformation": "percentil 55,00 → 55,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0.4,
+            "contribution": 22,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Beta: DEP de WW = 5,50 kg (Synthetic 1; programa SYN, release r1). percentil 55,00 → 55,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": []
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 10,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 50,
+            "method": "zscore",
+            "transformation": "z = (10,00 − 10,00)/2,00 = 0,00 ; score = 50,00",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0.25,
+            "contribution": 12.5,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Beta: DEP de YW = 10,00 kg (Synthetic 1; programa SYN, release r1). z = (10,00 − 10,00)/2,00 = 0,00 ; score = 50,00.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 7,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 70,
+            "score": 30,
+            "method": "percentile",
+            "transformation": "percentil 70,00 → 30,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0.15,
+            "contribution": 4.5,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Beta: DEP de SCS = 7,00 kg (Synthetic 1; programa SYN, release r1). percentil 70,00 → 30,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 35,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 100,
+            "method": "target_range",
+            "transformation": "valor 35,00 dentro da faixa [30,00, 40,00] → 100",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0.2,
+            "contribution": 20,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Beta: DEP de BW = 35,00 kg (Synthetic 1; programa SYN, release r1). valor 35,00 dentro da faixa [30,00, 40,00] → 100.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "calculated",
+          "points": 1.0786561531850327,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 55,
+              "damScore": 40,
+              "gain": 0.15,
+              "weight": 0.4,
+              "points": 0.6,
+              "explanation": "Score do touro 55,00, da matriz 40,00 ⇒ ganho 0,15; pontos = 10,00 × 0,40 × 0,15 = 0,60.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 50,
+              "damScore": 30.853753872598688,
+              "gain": 0.19146246127401312,
+              "weight": 0.25,
+              "points": 0.4786561531850328,
+              "explanation": "Score do touro 50,00, da matriz 30,85 ⇒ ganho 0,19; pontos = 10,00 × 0,25 × 0,19 = 0,48.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 30,
+              "damScore": 40,
+              "gain": 0,
+              "weight": 0.15,
+              "points": 0,
+              "explanation": "Score do touro 30,00, da matriz 40,00 ⇒ ganho 0,00; pontos = 10,00 × 0,15 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 100,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.2,
+              "points": 0,
+              "explanation": "Score do touro 100,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,20 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Bônus pela melhora do touro sobre a matriz, nas características em que ambos têm avaliação na mesma base.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "calculated",
+            "points": 0.6666666666666665,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Acurácias abaixo de 60,00% reduzem o score em 0,67 ponto(s).",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": {
+          "base": 59,
+          "complementarity": 1.0786561531850327,
+          "penalties": 0.6666666666666665,
+          "unclamped": 59.411989486518365,
+          "final": 59.411989486518365,
+          "clamped": false,
+          "coverage": 1,
+          "formula": "final = limitar(base + complementaridade − penalidades, 0, 100) ; base = Σ(score × peso_normalizado)"
+        },
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      {
+        "bull": {
+          "id": "e",
+          "name": "Epsilon",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "not_calculable",
+        "rank": 0,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [
+          "Apenas 40,00% do peso do perfil é calculável (mínimo exigido: 100,00%).",
+          "Componentes não calculáveis: YW (DEP), SCS (DEP), BW (DEP)."
+        ],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 6,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": 60,
+            "score": 60,
+            "method": "percentile",
+            "transformation": "percentil 60,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "e1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Epsilon: DEP de WW = 6,00 kg (Synthetic 1; programa SYN, release r1). percentil 60,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 25,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de YW.",
+            "warnings": []
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 15,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de SCS.",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 20,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de BW.",
+            "warnings": []
+          }
+        ],
+        "complementarity": {
+          "status": "not_calculable",
+          "points": 0,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 60,
+              "damScore": 40,
+              "gain": 0.2,
+              "weight": 1,
+              "points": 2,
+              "explanation": "Score do touro 60,00, da matriz 40,00 ⇒ ganho 0,20; pontos = 10,00 × 1,00 × 0,20 = 2,00.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Não aplicada: o score final deste touro não é calculável.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "1 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": null,
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      {
+        "bull": {
+          "id": "c",
+          "name": "Gama",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "not_calculable",
+        "rank": 0,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [
+          "Apenas 60,00% do peso do perfil é calculável (mínimo exigido: 100,00%).",
+          "Componentes não calculáveis: WW (DEP)."
+        ],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 40,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "g1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "OTHER",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Gama tem DEP de WW apenas em base diferente da usada para comparar os candidatos (DEP WW · SYN r1 · base-A · NEL). Avaliações de bases diferentes não são equivalentes e não são convertidas.",
+            "warnings": [
+              "⚠ Comparação genética não suportada entre essas bases.",
+              "Base do touro: DEP WW · OTHER r1 · base-A · NEL"
+            ]
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 11,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 69.14624612740131,
+            "method": "zscore",
+            "transformation": "z = (11,00 − 10,00)/2,00 = 0,50 ; score = 69,15",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Gama: DEP de YW = 11,00 kg (Synthetic 1; programa SYN, release r1). z = (11,00 − 10,00)/2,00 = 0,50 ; score = 69,15.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 4,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 40,
+            "score": 60,
+            "method": "percentile",
+            "transformation": "percentil 40,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Gama: DEP de SCS = 4,00 kg (Synthetic 1; programa SYN, release r1). percentil 40,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 38,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 100,
+            "method": "target_range",
+            "transformation": "valor 38,00 dentro da faixa [30,00, 40,00] → 100",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Gama: DEP de BW = 38,00 kg (Synthetic 1; programa SYN, release r1). valor 38,00 dentro da faixa [30,00, 40,00] → 100.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "not_calculable",
+          "points": 0,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 69.14624612740131,
+              "damScore": 30.853753872598688,
+              "gain": 0.38292492254802624,
+              "weight": 0.4166666666666667,
+              "points": 1.595520510616776,
+              "explanation": "Score do touro 69,15, da matriz 30,85 ⇒ ganho 0,38; pontos = 10,00 × 0,42 × 0,38 = 1,60.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 60,
+              "damScore": 40,
+              "gain": 0.2,
+              "weight": 0.25,
+              "points": 0.5,
+              "explanation": "Score do touro 60,00, da matriz 40,00 ⇒ ganho 0,20; pontos = 10,00 × 0,25 × 0,20 = 0,50.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 100,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.3333333333333333,
+              "points": 0,
+              "explanation": "Score do touro 100,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,33 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Não aplicada: o score final deste touro não é calculável.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": null,
+        "warnings": [
+          "WW: ⚠ Comparação genética não suportada entre essas bases."
+        ],
+        "pedigreeNotes": []
+      },
+      {
+        "bull": {
+          "id": "d",
+          "name": "Delta",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 0,
+          "unitCost": 50
+        },
+        "status": "excluded",
+        "rank": 0,
+        "tied": false,
+        "exclusions": [
+          {
+            "filter": "estoque",
+            "reason": "Estoque insuficiente: 0 dose(s), mínimo exigido 1."
+          }
+        ],
+        "reasons": [],
+        "components": [],
+        "complementarity": {
+          "status": "",
+          "points": 0,
+          "maxBonus": 0,
+          "formula": "",
+          "items": null,
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": ""
+          },
+          "explanation": "",
+          "warnings": null
+        },
+        "penalties": [],
+        "final": null,
+        "warnings": [],
+        "pedigreeNotes": []
+      }
+    ],
+    "top": [
+      "a",
+      "b"
+    ],
+    "datasets": [
+      {
+        "id": "ds1",
+        "packageId": "synthetic",
+        "name": "Synthetic",
+        "version": "1",
+        "program": "SYN",
+        "release": "r1",
+        "sha256": "0",
+        "isDemo": true,
+        "origin": "",
+        "licenseStatus": ""
+      }
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "snapshots": {
+    "a": {
+      "snapshotVersion": 1,
+      "engineVersion": "0.1.0",
+      "createdAt": "2026-10-11T12:00:00Z",
+      "female": {
+        "id": "dam",
+        "name": "Matriz",
+        "registration": "",
+        "sex": "female",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "femaleEvals": [
+        {
+          "id": "m1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 4,
+          "accuracy": 0.5,
+          "percentile": 40,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 9,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "m3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 6,
+          "accuracy": 0.7,
+          "percentile": 60,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 36,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "bull": {
+        "id": "a",
+        "name": "Alfa",
+        "registration": "",
+        "sex": "male",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "bullEvals": [
+        {
+          "id": "a1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 8,
+          "accuracy": 0.8,
+          "percentile": 80,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "a2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 12,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "a3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 3,
+          "accuracy": 0.7,
+          "percentile": 30,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "a4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 43,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "profile": {
+        "id": "p",
+        "name": "Golden",
+        "isDemo": true,
+        "demoNotice": "DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA",
+        "description": "",
+        "traits": [
+          {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "weight": 40,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "weight": 25,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "weight": 15,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "weight": 20,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": 10,
+            "required": false
+          }
+        ],
+        "filters": {
+          "requireStock": true,
+          "minDoses": 0,
+          "maxUnitCost": null,
+          "minAccuracy": null,
+          "excludeDirectAncestors": false,
+          "ancestorGenerations": 3
+        },
+        "normalization": "auto",
+        "minCoverage": 1,
+        "complementarity": {
+          "maxBonusPoints": 10
+        },
+        "penalties": {
+          "lowAccuracy": {
+            "threshold": 0.6,
+            "maxPoints": 5
+          }
+        }
+      },
+      "bases": [
+        {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            },
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "OTHER",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "YW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "SCS",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "BW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        }
+      ],
+      "datasets": [
+        {
+          "id": "ds1",
+          "packageId": "synthetic",
+          "name": "Synthetic",
+          "version": "1",
+          "program": "SYN",
+          "release": "r1",
+          "sha256": "0",
+          "isDemo": true,
+          "origin": "",
+          "licenseStatus": ""
+        }
+      ],
+      "result": {
+        "bull": {
+          "id": "a",
+          "name": "Alfa",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "calculated",
+        "rank": 1,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 8,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": 0.8,
+            "percentile": 80,
+            "score": 80,
+            "method": "percentile",
+            "transformation": "percentil 80,00 → 80,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0.4,
+            "contribution": 32,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Alfa: DEP de WW = 8,00 kg (Synthetic 1; programa SYN, release r1). percentil 80,00 → 80,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": []
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 12,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 84.1344746068543,
+            "method": "zscore",
+            "transformation": "z = (12,00 − 10,00)/2,00 = 1,00 ; score = 84,13",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0.25,
+            "contribution": 21.033618651713574,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Alfa: DEP de YW = 12,00 kg (Synthetic 1; programa SYN, release r1). z = (12,00 − 10,00)/2,00 = 1,00 ; score = 84,13.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 3,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 30,
+            "score": 70,
+            "method": "percentile",
+            "transformation": "percentil 30,00 → 70,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0.15,
+            "contribution": 10.5,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Alfa: DEP de SCS = 3,00 kg (Synthetic 1; programa SYN, release r1). percentil 30,00 → 70,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 43,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 70,
+            "method": "target_range",
+            "transformation": "valor 43,00 a 3,00 da faixa [30,00, 40,00]; tolerância 10,00 → 70,00",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0.2,
+            "contribution": 14,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "a4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Alfa: DEP de BW = 43,00 kg (Synthetic 1; programa SYN, release r1). valor 43,00 a 3,00 da faixa [30,00, 40,00]; tolerância 10,00 → 70,00.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "calculated",
+          "points": 3.3820180183563906,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 80,
+              "damScore": 40,
+              "gain": 0.4,
+              "weight": 0.4,
+              "points": 1.6,
+              "explanation": "Score do touro 80,00, da matriz 40,00 ⇒ ganho 0,40; pontos = 10,00 × 0,40 × 0,40 = 1,60.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 84.1344746068543,
+              "damScore": 30.853753872598688,
+              "gain": 0.532807207342556,
+              "weight": 0.25,
+              "points": 1.33201801835639,
+              "explanation": "Score do touro 84,13, da matriz 30,85 ⇒ ganho 0,53; pontos = 10,00 × 0,25 × 0,53 = 1,33.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 70,
+              "damScore": 40,
+              "gain": 0.3,
+              "weight": 0.15,
+              "points": 0.44999999999999996,
+              "explanation": "Score do touro 70,00, da matriz 40,00 ⇒ ganho 0,30; pontos = 10,00 × 0,15 × 0,30 = 0,45.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 70,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.2,
+              "points": 0,
+              "explanation": "Score do touro 70,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,20 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Bônus pela melhora do touro sobre a matriz, nas características em que ambos têm avaliação na mesma base.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "calculated",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": {
+          "base": 77.53361865171357,
+          "complementarity": 3.3820180183563906,
+          "penalties": 0,
+          "unclamped": 80.91563667006996,
+          "final": 80.91563667006996,
+          "clamped": false,
+          "coverage": 1,
+          "formula": "final = limitar(base + complementaridade − penalidades, 0, 100) ; base = Σ(score × peso_normalizado)"
+        },
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      "candidates": 5,
+      "runWarnings": [],
+      "isDemo": true
+    },
+    "b": {
+      "snapshotVersion": 1,
+      "engineVersion": "0.1.0",
+      "createdAt": "2026-10-11T12:00:00Z",
+      "female": {
+        "id": "dam",
+        "name": "Matriz",
+        "registration": "",
+        "sex": "female",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "femaleEvals": [
+        {
+          "id": "m1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 4,
+          "accuracy": 0.5,
+          "percentile": 40,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 9,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "m3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 6,
+          "accuracy": 0.7,
+          "percentile": 60,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 36,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "bull": {
+        "id": "b",
+        "name": "Beta",
+        "registration": "",
+        "sex": "male",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "bullEvals": [
+        {
+          "id": "b1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 5.5,
+          "accuracy": 0.4,
+          "percentile": 55,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "b2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 10,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "b3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 7,
+          "accuracy": 0.7,
+          "percentile": 70,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "b4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 35,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "profile": {
+        "id": "p",
+        "name": "Golden",
+        "isDemo": true,
+        "demoNotice": "DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA",
+        "description": "",
+        "traits": [
+          {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "weight": 40,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "weight": 25,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "weight": 15,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "weight": 20,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": 10,
+            "required": false
+          }
+        ],
+        "filters": {
+          "requireStock": true,
+          "minDoses": 0,
+          "maxUnitCost": null,
+          "minAccuracy": null,
+          "excludeDirectAncestors": false,
+          "ancestorGenerations": 3
+        },
+        "normalization": "auto",
+        "minCoverage": 1,
+        "complementarity": {
+          "maxBonusPoints": 10
+        },
+        "penalties": {
+          "lowAccuracy": {
+            "threshold": 0.6,
+            "maxPoints": 5
+          }
+        }
+      },
+      "bases": [
+        {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            },
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "OTHER",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "YW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "SCS",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "BW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        }
+      ],
+      "datasets": [
+        {
+          "id": "ds1",
+          "packageId": "synthetic",
+          "name": "Synthetic",
+          "version": "1",
+          "program": "SYN",
+          "release": "r1",
+          "sha256": "0",
+          "isDemo": true,
+          "origin": "",
+          "licenseStatus": ""
+        }
+      ],
+      "result": {
+        "bull": {
+          "id": "b",
+          "name": "Beta",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "calculated",
+        "rank": 2,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 5.5,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": 0.4,
+            "percentile": 55,
+            "score": 55,
+            "method": "percentile",
+            "transformation": "percentil 55,00 → 55,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0.4,
+            "contribution": 22,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Beta: DEP de WW = 5,50 kg (Synthetic 1; programa SYN, release r1). percentil 55,00 → 55,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": []
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 10,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 50,
+            "method": "zscore",
+            "transformation": "z = (10,00 − 10,00)/2,00 = 0,00 ; score = 50,00",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0.25,
+            "contribution": 12.5,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Beta: DEP de YW = 10,00 kg (Synthetic 1; programa SYN, release r1). z = (10,00 − 10,00)/2,00 = 0,00 ; score = 50,00.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 7,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 70,
+            "score": 30,
+            "method": "percentile",
+            "transformation": "percentil 70,00 → 30,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0.15,
+            "contribution": 4.5,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Beta: DEP de SCS = 7,00 kg (Synthetic 1; programa SYN, release r1). percentil 70,00 → 30,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 35,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 100,
+            "method": "target_range",
+            "transformation": "valor 35,00 dentro da faixa [30,00, 40,00] → 100",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0.2,
+            "contribution": 20,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "b4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Beta: DEP de BW = 35,00 kg (Synthetic 1; programa SYN, release r1). valor 35,00 dentro da faixa [30,00, 40,00] → 100.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "calculated",
+          "points": 1.0786561531850327,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 55,
+              "damScore": 40,
+              "gain": 0.15,
+              "weight": 0.4,
+              "points": 0.6,
+              "explanation": "Score do touro 55,00, da matriz 40,00 ⇒ ganho 0,15; pontos = 10,00 × 0,40 × 0,15 = 0,60.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 50,
+              "damScore": 30.853753872598688,
+              "gain": 0.19146246127401312,
+              "weight": 0.25,
+              "points": 0.4786561531850328,
+              "explanation": "Score do touro 50,00, da matriz 30,85 ⇒ ganho 0,19; pontos = 10,00 × 0,25 × 0,19 = 0,48.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 30,
+              "damScore": 40,
+              "gain": 0,
+              "weight": 0.15,
+              "points": 0,
+              "explanation": "Score do touro 30,00, da matriz 40,00 ⇒ ganho 0,00; pontos = 10,00 × 0,15 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 100,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.2,
+              "points": 0,
+              "explanation": "Score do touro 100,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,20 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Bônus pela melhora do touro sobre a matriz, nas características em que ambos têm avaliação na mesma base.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "calculated",
+            "points": 0.6666666666666665,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Acurácias abaixo de 60,00% reduzem o score em 0,67 ponto(s).",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": {
+          "base": 59,
+          "complementarity": 1.0786561531850327,
+          "penalties": 0.6666666666666665,
+          "unclamped": 59.411989486518365,
+          "final": 59.411989486518365,
+          "clamped": false,
+          "coverage": 1,
+          "formula": "final = limitar(base + complementaridade − penalidades, 0, 100) ; base = Σ(score × peso_normalizado)"
+        },
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      "candidates": 5,
+      "runWarnings": [],
+      "isDemo": true
+    },
+    "c": {
+      "snapshotVersion": 1,
+      "engineVersion": "0.1.0",
+      "createdAt": "2026-10-11T12:00:00Z",
+      "female": {
+        "id": "dam",
+        "name": "Matriz",
+        "registration": "",
+        "sex": "female",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "femaleEvals": [
+        {
+          "id": "m1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 4,
+          "accuracy": 0.5,
+          "percentile": 40,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 9,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "m3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 6,
+          "accuracy": 0.7,
+          "percentile": 60,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 36,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "bull": {
+        "id": "c",
+        "name": "Gama",
+        "registration": "",
+        "sex": "male",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "bullEvals": [
+        {
+          "id": "c2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 11,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "c3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 4,
+          "accuracy": 0.7,
+          "percentile": 40,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "c4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 38,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "g1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "OTHER",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 9.9,
+          "accuracy": 0.9,
+          "percentile": 99,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "profile": {
+        "id": "p",
+        "name": "Golden",
+        "isDemo": true,
+        "demoNotice": "DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA",
+        "description": "",
+        "traits": [
+          {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "weight": 40,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "weight": 25,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "weight": 15,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "weight": 20,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": 10,
+            "required": false
+          }
+        ],
+        "filters": {
+          "requireStock": true,
+          "minDoses": 0,
+          "maxUnitCost": null,
+          "minAccuracy": null,
+          "excludeDirectAncestors": false,
+          "ancestorGenerations": 3
+        },
+        "normalization": "auto",
+        "minCoverage": 1,
+        "complementarity": {
+          "maxBonusPoints": 10
+        },
+        "penalties": {
+          "lowAccuracy": {
+            "threshold": 0.6,
+            "maxPoints": 5
+          }
+        }
+      },
+      "bases": [
+        {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            },
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "OTHER",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "YW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "SCS",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "BW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        }
+      ],
+      "datasets": [
+        {
+          "id": "ds1",
+          "packageId": "synthetic",
+          "name": "Synthetic",
+          "version": "1",
+          "program": "SYN",
+          "release": "r1",
+          "sha256": "0",
+          "isDemo": true,
+          "origin": "",
+          "licenseStatus": ""
+        }
+      ],
+      "result": {
+        "bull": {
+          "id": "c",
+          "name": "Gama",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "not_calculable",
+        "rank": 0,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [
+          "Apenas 60,00% do peso do perfil é calculável (mínimo exigido: 100,00%).",
+          "Componentes não calculáveis: WW (DEP)."
+        ],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 40,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "g1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "OTHER",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Gama tem DEP de WW apenas em base diferente da usada para comparar os candidatos (DEP WW · SYN r1 · base-A · NEL). Avaliações de bases diferentes não são equivalentes e não são convertidas.",
+            "warnings": [
+              "⚠ Comparação genética não suportada entre essas bases.",
+              "Base do touro: DEP WW · OTHER r1 · base-A · NEL"
+            ]
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 11,
+            "damValue": 9,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 69.14624612740131,
+            "method": "zscore",
+            "transformation": "z = (11,00 − 10,00)/2,00 = 0,50 ; score = 69,15",
+            "formula": "z = (x − μ)/σ ; score = 100·Φ(z)",
+            "rawWeight": 25,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "YW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c2",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Gama: DEP de YW = 11,00 kg (Synthetic 1; programa SYN, release r1). z = (11,00 − 10,00)/2,00 = 0,50 ; score = 69,15.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MINIMIZE",
+            "inputValue": 4,
+            "damValue": 6,
+            "unit": "kg",
+            "accuracy": 0.7,
+            "percentile": 40,
+            "score": 60,
+            "method": "percentile",
+            "transformation": "percentil 40,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido)",
+            "formula": "score = 100 − percentil",
+            "rawWeight": 15,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "SCS",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c3",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Gama: DEP de SCS = 4,00 kg (Synthetic 1; programa SYN, release r1). percentil 40,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior); MINIMIZE inverte o sentido).",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "TARGET_RANGE",
+            "inputValue": 38,
+            "damValue": 36,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": null,
+            "score": 100,
+            "method": "target_range",
+            "transformation": "valor 38,00 dentro da faixa [30,00, 40,00] → 100",
+            "formula": "score = 100 · max(0, 1 − distância/tolerância)",
+            "rawWeight": 20,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "BW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "c4",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Gama: DEP de BW = 38,00 kg (Synthetic 1; programa SYN, release r1). valor 38,00 dentro da faixa [30,00, 40,00] → 100.",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          }
+        ],
+        "complementarity": {
+          "status": "not_calculable",
+          "points": 0,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "YW",
+              "name": "YW (DEP)",
+              "status": "calculated",
+              "bullScore": 69.14624612740131,
+              "damScore": 30.853753872598688,
+              "gain": 0.38292492254802624,
+              "weight": 0.4166666666666667,
+              "points": 1.595520510616776,
+              "explanation": "Score do touro 69,15, da matriz 30,85 ⇒ ganho 0,38; pontos = 10,00 × 0,42 × 0,38 = 1,60.",
+              "source": {
+                "evaluationId": "m2",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "SCS",
+              "name": "SCS (DEP)",
+              "status": "calculated",
+              "bullScore": 60,
+              "damScore": 40,
+              "gain": 0.2,
+              "weight": 0.25,
+              "points": 0.5,
+              "explanation": "Score do touro 60,00, da matriz 40,00 ⇒ ganho 0,20; pontos = 10,00 × 0,25 × 0,20 = 0,50.",
+              "source": {
+                "evaluationId": "m3",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            },
+            {
+              "traitCode": "BW",
+              "name": "BW (DEP)",
+              "status": "calculated",
+              "bullScore": 100,
+              "damScore": 100,
+              "gain": 0,
+              "weight": 0.3333333333333333,
+              "points": 0,
+              "explanation": "Score do touro 100,00, da matriz 100,00 ⇒ ganho 0,00; pontos = 10,00 × 0,33 × 0,00 = 0,00.",
+              "source": {
+                "evaluationId": "m4",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Não aplicada: o score final deste touro não é calculável.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "2 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": null,
+        "warnings": [
+          "WW: ⚠ Comparação genética não suportada entre essas bases."
+        ],
+        "pedigreeNotes": []
+      },
+      "candidates": 5,
+      "runWarnings": [],
+      "isDemo": true
+    },
+    "e": {
+      "snapshotVersion": 1,
+      "engineVersion": "0.1.0",
+      "createdAt": "2026-10-11T12:00:00Z",
+      "female": {
+        "id": "dam",
+        "name": "Matriz",
+        "registration": "",
+        "sex": "female",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "femaleEvals": [
+        {
+          "id": "m1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 4,
+          "accuracy": 0.5,
+          "percentile": 40,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m2",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 9,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "YW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": 10,
+            "populationSd": 2
+          }
+        },
+        {
+          "id": "m3",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 6,
+          "accuracy": 0.7,
+          "percentile": 60,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "SCS",
+          "direction": "MINIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        },
+        {
+          "id": "m4",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 36,
+          "accuracy": null,
+          "percentile": null,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "BW",
+          "direction": "TARGET_RANGE",
+          "idealMin": 30,
+          "idealMax": 40,
+          "meta": {
+            "percentileSemantics": "",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "bull": {
+        "id": "e",
+        "name": "Epsilon",
+        "registration": "",
+        "sex": "male",
+        "status": "active",
+        "breedName": "",
+        "isDemo": false
+      },
+      "bullEvals": [
+        {
+          "id": "e1",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "value": 6,
+          "accuracy": null,
+          "percentile": 60,
+          "datasetId": "ds1",
+          "datasetName": "Synthetic",
+          "datasetVersion": "1",
+          "isDemo": false,
+          "createdAt": "2026-01-01T00:00:00Z",
+          "traitName": "WW",
+          "direction": "MAXIMIZE",
+          "idealMin": null,
+          "idealMax": null,
+          "meta": {
+            "percentileSemantics": "ascending",
+            "populationMean": null,
+            "populationSd": null
+          }
+        }
+      ],
+      "profile": {
+        "id": "p",
+        "name": "Golden",
+        "isDemo": true,
+        "demoNotice": "DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA",
+        "description": "",
+        "traits": [
+          {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "weight": 40,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "weight": 25,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "weight": 15,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": null,
+            "required": false
+          },
+          {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "weight": 20,
+            "direction": "",
+            "idealMin": null,
+            "idealMax": null,
+            "targetTolerance": 10,
+            "required": false
+          }
+        ],
+        "filters": {
+          "requireStock": true,
+          "minDoses": 0,
+          "maxUnitCost": null,
+          "minAccuracy": null,
+          "excludeDirectAncestors": false,
+          "ancestorGenerations": 3
+        },
+        "normalization": "auto",
+        "minCoverage": 1,
+        "complementarity": {
+          "maxBonusPoints": 10
+        },
+        "penalties": {
+          "lowAccuracy": {
+            "threshold": 0.6,
+            "maxPoints": 5
+          }
+        }
+      },
+      "bases": [
+        {
+          "traitCode": "WW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            },
+            {
+              "basis": {
+                "traitCode": "WW",
+                "evaluationType": "DEP",
+                "program": "OTHER",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 1
+            }
+          ]
+        },
+        {
+          "traitCode": "YW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "YW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "SCS",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "SCS",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        },
+        {
+          "traitCode": "BW",
+          "evaluationType": "DEP",
+          "basis": {
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "program": "SYN",
+            "release": "r1",
+            "geneticBase": "base-A",
+            "breedCode": "NEL",
+            "unit": "kg"
+          },
+          "candidates": 3,
+          "eligible": 4,
+          "damMatches": true,
+          "reason": "Base com mais candidatos avaliados (3 de 4)",
+          "alternatives": [
+            {
+              "basis": {
+                "traitCode": "BW",
+                "evaluationType": "DEP",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "breedCode": "NEL",
+                "unit": "kg"
+              },
+              "candidates": 3
+            }
+          ]
+        }
+      ],
+      "datasets": [
+        {
+          "id": "ds1",
+          "packageId": "synthetic",
+          "name": "Synthetic",
+          "version": "1",
+          "program": "SYN",
+          "release": "r1",
+          "sha256": "0",
+          "isDemo": true,
+          "origin": "",
+          "licenseStatus": ""
+        }
+      ],
+      "result": {
+        "bull": {
+          "id": "e",
+          "name": "Epsilon",
+          "registration": "",
+          "sex": "male",
+          "status": "active",
+          "breedName": "",
+          "isDemo": false
+        },
+        "stock": {
+          "doses": 10,
+          "unitCost": 50
+        },
+        "status": "not_calculable",
+        "rank": 0,
+        "tied": false,
+        "exclusions": [],
+        "reasons": [
+          "Apenas 40,00% do peso do perfil é calculável (mínimo exigido: 100,00%).",
+          "Componentes não calculáveis: YW (DEP), SCS (DEP), BW (DEP)."
+        ],
+        "components": [
+          {
+            "name": "WW (DEP)",
+            "traitCode": "WW",
+            "evaluationType": "DEP",
+            "status": "calculated",
+            "direction": "MAXIMIZE",
+            "inputValue": 6,
+            "damValue": 4,
+            "unit": "kg",
+            "accuracy": null,
+            "percentile": 60,
+            "score": 60,
+            "method": "percentile",
+            "transformation": "percentil 60,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior))",
+            "formula": "score = percentil",
+            "rawWeight": 40,
+            "weight": 0,
+            "contribution": null,
+            "basis": {
+              "traitCode": "WW",
+              "evaluationType": "DEP",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "breedCode": "NEL",
+              "unit": "kg"
+            },
+            "source": {
+              "evaluationId": "e1",
+              "datasetId": "ds1",
+              "datasetName": "Synthetic",
+              "datasetVersion": "1",
+              "program": "SYN",
+              "release": "r1",
+              "geneticBase": "base-A",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 40,00"
+            },
+            "explanation": "Epsilon: DEP de WW = 6,00 kg (Synthetic 1; programa SYN, release r1). percentil 60,00 → 60,00 (percentil ascendente (valor maior ⇒ percentil maior)).",
+            "warnings": [
+              "Avaliação sem acurácia informada."
+            ]
+          },
+          {
+            "name": "YW (DEP)",
+            "traitCode": "YW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 25,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 25,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de YW.",
+            "warnings": []
+          },
+          {
+            "name": "SCS (DEP)",
+            "traitCode": "SCS",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 15,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 15,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de SCS.",
+            "warnings": []
+          },
+          {
+            "name": "BW (DEP)",
+            "traitCode": "BW",
+            "evaluationType": "DEP",
+            "status": "not_calculable",
+            "direction": "",
+            "inputValue": null,
+            "damValue": null,
+            "unit": "",
+            "accuracy": null,
+            "percentile": null,
+            "score": null,
+            "method": "",
+            "transformation": "",
+            "formula": "",
+            "rawWeight": 20,
+            "weight": 0,
+            "contribution": null,
+            "basis": null,
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": peso 20,00"
+            },
+            "explanation": "Epsilon não tem avaliação DEP de BW.",
+            "warnings": []
+          }
+        ],
+        "complementarity": {
+          "status": "not_calculable",
+          "points": 0,
+          "maxBonus": 10,
+          "formula": "pontos = bônus_máximo × Σ(peso_normalizado × ganho) ; ganho = limitar((score_touro − score_matriz)/100, 0, 1)",
+          "items": [
+            {
+              "traitCode": "WW",
+              "name": "WW (DEP)",
+              "status": "calculated",
+              "bullScore": 60,
+              "damScore": 40,
+              "gain": 0.2,
+              "weight": 1,
+              "points": 2,
+              "explanation": "Score do touro 60,00, da matriz 40,00 ⇒ ganho 0,20; pontos = 10,00 × 1,00 × 0,20 = 2,00.",
+              "source": {
+                "evaluationId": "m1",
+                "datasetId": "ds1",
+                "datasetName": "Synthetic",
+                "datasetVersion": "1",
+                "program": "SYN",
+                "release": "r1",
+                "geneticBase": "base-A",
+                "isDemo": false,
+                "parameter": ""
+              }
+            }
+          ],
+          "source": {
+            "evaluationId": "",
+            "datasetId": "",
+            "datasetName": "",
+            "datasetVersion": "",
+            "program": "",
+            "release": "",
+            "geneticBase": "",
+            "isDemo": false,
+            "parameter": "perfil \"Golden\": bônus máximo de complementaridade = 10,00 pontos"
+          },
+          "explanation": "Não aplicada: o score final deste touro não é calculável.",
+          "warnings": []
+        },
+        "penalties": [
+          {
+            "name": "Baixa acurácia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "pontos = máximo × Σ(peso_normalizado × max(0, (limiar − acurácia)/limiar))",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": "perfil \"Golden\": limiar 0,60, máximo 5,00 pontos"
+            },
+            "explanation": "Nenhuma acurácia abaixo de 60,00%.",
+            "warnings": [
+              "1 componente(s) sem acurácia informada não foram penalizados."
+            ]
+          },
+          {
+            "name": "Parentesco / endogamia",
+            "status": "not_applied",
+            "points": 0,
+            "formula": "",
+            "source": {
+              "evaluationId": "",
+              "datasetId": "",
+              "datasetName": "",
+              "datasetVersion": "",
+              "program": "",
+              "release": "",
+              "geneticBase": "",
+              "isDemo": false,
+              "parameter": ""
+            },
+            "explanation": "Planejado — ainda não utilizado no score do MVP. O coeficiente de parentesco/endogamia não é calculado nesta versão; ancestrais comuns são apenas listados como alerta.",
+            "warnings": []
+          }
+        ],
+        "final": null,
+        "warnings": [],
+        "pedigreeNotes": []
+      },
+      "candidates": 5,
+      "runWarnings": [],
+      "isDemo": true
+    }
+  }
+}

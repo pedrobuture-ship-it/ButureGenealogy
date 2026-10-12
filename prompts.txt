@@ -1,0 +1,1824 @@
+# PROMPT 1 — Fundação do projeto
+
+Atue como um engenheiro de software sênior especializado em Go, React, TypeScript, SQLite e aplicações desktop com Wails.
+
+Quero iniciar um software desktop local-first de melhoramento genético bovino.
+
+Stack obrigatória do MVP:
+
+- Wails v2 estável;
+- Go no backend;
+- React;
+- TypeScript;
+- Vite;
+- SQLite;
+- `modernc.org/sqlite`, preferencialmente, evitando dependência de CGO;
+- CSS/SCSS ou uma solução simples de estilização;
+- nada de Supabase;
+- nada de backend remoto obrigatório;
+- nada de Electron;
+- funcionamento offline como requisito principal.
+
+O software será utilizado futuramente para analisar bovinos de corte e leite, genealogia, avaliações genéticas, características fenotípicas, sêmen e acasalamentos.
+
+Neste primeiro prompt, não implemente ainda o motor genético completo.
+
+Sua tarefa agora é:
+
+1. Inspecionar o repositório atual antes de modificar qualquer coisa.
+2. Se o projeto ainda não existir, inicializar corretamente Wails + React + TypeScript.
+3. Organizar a arquitetura para impedir que regras de negócio fiquem espalhadas pelo frontend.
+4. Criar uma estrutura aproximada:
+
+```text
+/
+├── frontend/
+│   └── src/
+│       ├── components/
+│       ├── pages/
+│       ├── layouts/
+│       ├── features/
+│       ├── hooks/
+│       ├── types/
+│       └── utils/
+│
+├── internal/
+│   ├── database/
+│   ├── domain/
+│   ├── repository/
+│   ├── service/
+│   ├── genetics/
+│   ├── datasets/
+│   └── backup/
+│
+├── migrations/
+├── datasets/
+└── docs/
+```
+
+Adapte a estrutura ao padrão correto do Wails quando necessário.
+
+Crie também:
+
+- inicialização segura do SQLite;
+- diretório adequado para dados da aplicação;
+- migrations versionadas;
+- tratamento básico de erros;
+- logger;
+- configuração;
+- health check do banco;
+- fechamento correto da conexão na saída do aplicativo.
+
+Não coloque `farm.db` junto do executável se isso puder causar problemas de permissão. Use um diretório de dados adequado à plataforma.
+
+Crie um layout desktop inicial contendo sidebar com:
+
+- Início
+- Rebanho
+- Genealogia
+- Sêmen
+- Acasalamentos
+- Bibliotecas
+- Cálculos
+- Relatórios
+- Configurações
+
+Neste momento as páginas podem ser placeholders, mas a navegação deve funcionar.
+
+Direção de UI:
+
+- profissional;
+- agro-tech;
+- moderna;
+- bastante limpa;
+- não parecer sistema ERP antigo;
+- sem excesso de gradientes;
+- hierarquia visual forte;
+- boa densidade de informação;
+- desktop-first;
+- preparada para notebooks menores;
+- modo claro inicialmente.
+
+Não use emojis como elementos principais da interface.
+
+Crie também um `docs/ARCHITECTURE.md` explicando brevemente a divisão frontend/backend/database.
+
+Ao terminar:
+
+- rode o frontend;
+- rode os testes existentes;
+- execute o build possível do projeto;
+- corrija erros introduzidos;
+- não altere funcionalidades não relacionadas;
+- informe os arquivos principais criados/modificados.
+
+Não avance para funcionalidades de genética ainda.
+
+---
+
+# PROMPT 2 — Banco de dados e domínio
+
+Continue sobre o projeto existente.
+
+Primeiro inspecione tudo que foi criado no prompt anterior e preserve a arquitetura.
+
+Agora implemente a primeira versão do domínio e do SQLite.
+
+Precisamos separar dados da propriedade de bases científicas/datasets.
+
+Estrutura conceitual:
+
+```text
+farm.db
+```
+
+O `farm.db` conterá os dados privados do usuário.
+
+Crie migrations para entidades equivalentes a:
+
+### farms
+
+- id
+- name
+- owner_name opcional
+- city opcional
+- state opcional
+- notes
+- created_at
+- updated_at
+
+### breeds
+
+Inicialmente pode possuir registros mínimos locais necessários para o funcionamento:
+
+- id
+- code
+- name
+- species
+- purpose: beef, dairy, dual
+- active
+
+Não crie ainda uma suposta base científica completa.
+
+### animals
+
+- id
+- farm_id
+- registration
+- name
+- sex
+- breed_id
+- birth_date
+- category
+- status
+- father_id nullable
+- mother_id nullable
+- notes
+- created_at
+- updated_at
+
+Pai e mãe devem referenciar outros animais quando disponíveis.
+
+### animal_measurements
+
+Estrutura genérica para medições fenotípicas:
+
+- id
+- animal_id
+- trait_code
+- value
+- unit
+- measured_at
+- source
+- notes
+
+### genetic_evaluations
+
+- id
+- animal_id
+- dataset_id nullable
+- evaluation_program
+- evaluation_release
+- breed_code
+- trait_code
+- evaluation_type
+- value
+- unit
+- accuracy nullable
+- percentile nullable
+- genetic_base nullable
+- source_reference nullable
+- evaluated_at nullable
+
+### semen_inventory
+
+- id
+- bull_id
+- supplier
+- batch
+- quantity
+- unit_cost nullable
+- semen_type
+- notes
+
+### matings
+
+- id
+- farm_id
+- female_id
+- bull_id
+- status
+- score nullable
+- engine_version
+- calculation_snapshot
+- created_at
+
+Use UUID ou outra estratégia robusta de identificadores.
+
+Crie:
+
+- models/domain entities;
+- repositories;
+- services;
+- DTOs;
+- validação;
+- índices SQLite úteis;
+- foreign keys;
+- transactions quando necessário.
+
+Não permita pai ou mãe igual ao próprio animal.
+
+Evite lógica SQL diretamente em componentes React.
+
+Crie uma camada Go que possa ser chamada pelo Wails.
+
+Adicione testes unitários para validações importantes e testes básicos de repository usando banco temporário.
+
+Crie dados de demonstração somente se forem explicitamente marcados como:
+
+`DEMO / SYNTHETIC`
+
+Nunca apresente números fictícios como dados científicos reais.
+
+Ao final rode testes e build e corrija regressões.
+
+---
+
+# PROMPT 3 — Propriedade e Rebanho
+
+Agora implemente a primeira funcionalidade real de usuário.
+
+Página:
+
+# Rebanho
+
+Precisamos conseguir:
+
+- cadastrar propriedade;
+- cadastrar animal;
+- editar animal;
+- visualizar animal;
+- arquivar animal;
+- pesquisar;
+- filtrar;
+- ordenar.
+
+Não faça hard delete como ação padrão.
+
+Filtros:
+
+- propriedade;
+- raça;
+- sexo;
+- categoria;
+- status;
+- idade aproximada.
+
+A tabela deve mostrar pelo menos:
+
+- identificação;
+- nome;
+- raça;
+- sexo;
+- nascimento/idade;
+- categoria;
+- status.
+
+Crie também a página de detalhes do animal.
+
+Estruture-a em seções/tabs:
+
+### Resumo
+
+Informações principais.
+
+### Fenótipo
+
+Medições armazenadas em `animal_measurements`.
+
+### Genética
+
+Avaliações armazenadas em `genetic_evaluations`.
+
+### Genealogia
+
+Pai, mãe e ancestrais conhecidos.
+
+### Reprodução
+
+Pode permanecer parcialmente preparada para expansão futura.
+
+Crie UX boa para campos opcionais. Um animal não precisa possuir todos os dados.
+
+Não crie 100 colunas específicas no banco para características. Continue usando estrutura genérica baseada em traits.
+
+Adicione:
+
+- estados vazios;
+- feedback de salvamento;
+- confirmação para arquivamento;
+- mensagens de erro compreensíveis;
+- loading states.
+
+Mantenha tudo offline.
+
+No final inclua alguns registros sintéticos claramente identificados como dados DEMO para facilitar o desenvolvimento da interface.
+
+Não utilize qualquer dataset científico externo ainda.
+
+Teste CRUD e navegação.
+
+---
+
+# PROMPT 4 — Genealogia e pedigree
+
+Implemente agora o módulo de genealogia.
+
+Objetivo:
+
+permitir visualizar e navegar no pedigree de um animal.
+
+Na ficha do animal e na página Genealogia, quero uma árvore visual.
+
+Permita escolher:
+
+- 2 gerações;
+- 3 gerações;
+- 4 gerações;
+- 5 gerações.
+
+Cada nó deve mostrar:
+
+- nome ou identificação;
+- sexo;
+- raça;
+- registro quando existir.
+
+Ao clicar em um ancestral, abrir a ficha daquele animal.
+
+Se um ancestral não estiver cadastrado completamente, permitir criar um registro mínimo.
+
+Implemente no backend Go algoritmos para:
+
+1. coletar ancestrais;
+2. detectar ancestrais comuns;
+3. evitar loops/ciclos de pedigree;
+4. detectar inconsistências básicas;
+5. calcular profundidade disponível do pedigree.
+
+Crie uma estrutura preparada para posteriormente calcular:
+
+- coeficiente de parentesco;
+- coeficiente de endogamia.
+
+IMPORTANTE:
+
+Neste prompt, não invente uma fórmula simplificada de consanguinidade e apresente como cientificamente correta.
+
+Se implementar cálculo real, use algoritmo formal documentado e cubra com testes.
+
+Caso contrário, deixe a interface e os serviços preparados, marcando claramente:
+
+`não calculado nesta versão`.
+
+Crie testes de:
+
+- pai/mãe;
+- ancestral comum;
+- pedigree incompleto;
+- pedigree profundo;
+- tentativa de ciclo.
+
+Visualmente, a árvore precisa continuar utilizável mesmo com poucos ou muitos dados.
+
+---
+
+# PROMPT 5 — Sistema genérico de características
+
+Agora crie o sistema de características, que será uma das fundações do software.
+
+Não quero regras como:
+
+```text
+if breed == "Nelore" ...
+```
+
+espalhadas pelo código.
+
+Crie uma representação genérica de Trait.
+
+Um Trait deverá suportar aproximadamente:
+
+- code;
+- name;
+- description;
+- category;
+- purpose;
+- unit;
+- data_type;
+- evaluation_type;
+- optimization_direction;
+- ideal_min nullable;
+- ideal_max nullable;
+- higher_is_better quando aplicável;
+- source_dataset;
+- metadata.
+
+Categorias possíveis:
+
+- growth;
+- reproduction;
+- maternal;
+- carcass;
+- dairy;
+- conformation;
+- health;
+- temperament;
+- efficiency;
+- other.
+
+Tipos de otimização:
+
+- MAXIMIZE;
+- MINIMIZE;
+- TARGET_RANGE;
+- INFORMATION_ONLY.
+
+Prepare o sistema para trabalhar futuramente com:
+
+- fenótipo;
+- DEP;
+- EPD;
+- EBV;
+- PTA;
+- índices;
+- percentis.
+
+Na interface do animal:
+
+- agrupe traits por categoria;
+- mostre unidade;
+- mostre valor;
+- mostre origem;
+- mostre acurácia quando existir;
+- mostre percentil quando existir.
+
+Crie um componente reutilizável:
+
+`DataProvenance`
+
+que possa mostrar de onde veio aquele dado.
+
+Exemplo:
+
+```text
+Característica: Peso à desmama
+Tipo: DEP
+Dataset: X
+Versão: Y
+Programa: Z
+Acurácia: 81%
+```
+
+Não trate DEP, PTA, EBV e fenótipo como se fossem a mesma coisa.
+
+Crie documentação em:
+
+`docs/TRAITS.md`
+
+explicando o modelo.
+
+Adicione testes das regras de validação.
+
+---
+
+# PROMPT 6 — Bibliotecas / Datasets
+
+Agora implemente uma das partes centrais do projeto:
+
+# Bibliotecas
+
+O software deve funcionar como se datasets científicos fossem “pacotes” instaláveis.
+
+REGRA FUNDAMENTAL:
+
+A distribuição oficial do aplicativo só poderá incluir datasets cuja licença seja conhecida e permita a utilização pretendida e, se os dados forem distribuídos com o aplicativo, permita redistribuição.
+
+“Disponível gratuitamente na internet” NÃO significa automaticamente que pode ser redistribuído.
+
+Nunca marque automaticamente uma fonte como livre apenas porque o download é gratuito.
+
+Crie o conceito de Dataset Package.
+
+Sugestão de estrutura:
+
+```text
+dataset.genlib
+```
+
+pode ser um ZIP contendo:
+
+```text
+manifest.json
+traits.json
+data.csv ou data.json
+README.md
+LICENSE
+```
+
+Manifesto aproximado:
+
+```json
+{
+  "schemaVersion": 1,
+  "id": "example.dataset",
+  "name": "Example Dataset",
+  "version": "1.0.0",
+  "species": "Bos taurus",
+  "breeds": ["example"],
+  "purpose": ["beef"],
+  "authors": [],
+  "organization": "",
+  "sourceUrl": "",
+  "releaseDate": "",
+  "license": {
+    "name": "",
+    "url": "",
+    "redistributionAllowed": false,
+    "commercialUseAllowed": null
+  }
+}
+```
+
+Não confie cegamente no conteúdo do ZIP.
+
+Proteja a importação contra:
+
+- path traversal;
+- arquivos inesperados;
+- manifest inválido;
+- tamanho absurdo;
+- schema incompatível;
+- duplicidade de ID/versão.
+
+Página Bibliotecas:
+
+### Instaladas
+
+Mostrar:
+
+- nome;
+- versão;
+- raça;
+- finalidade;
+- fonte;
+- status;
+- licença;
+- quantidade aproximada de registros;
+- quantidade de traits.
+
+Ações:
+
+- detalhes;
+- ativar/desativar;
+- remover;
+- visualizar licença;
+- visualizar documentação.
+
+### Importar biblioteca
+
+Permitir:
+
+- `.genlib`;
+- CSV;
+- JSON.
+
+Para CSV/JSON genérico, crie assistente de mapeamento.
+
+Exemplo:
+
+```text
+Coluna DEP_PD
+→ Peso à desmama
+→ Tipo DEP
+→ Unidade kg
+```
+
+Antes de concluir:
+
+```text
+VALIDAÇÃO
+
+8.412 registros
+23 características reconhecidas
+482 sem acurácia
+17 duplicados
+3 traits não reconhecidos
+```
+
+Datasets importados pelo usuário podem ter licença diferente, mas o programa deve deixar claro:
+
+> A responsabilidade pela autorização de uso e distribuição de dados importados manualmente é do usuário.
+
+Não copie automaticamente um dataset particular para outros usuários.
+
+Crie versionamento.
+
+Preserve versões utilizadas por cálculos históricos.
+
+Crie testes extensivos do importador.
+
+---
+
+# PROMPT 7 — Banco de touros e estoque de sêmen
+
+Implemente agora a página:
+
+# Sêmen
+
+Touros devem continuar sendo animais normais do domínio, não uma entidade completamente separada que duplique dados.
+
+Um animal macho poderá possuir sêmen em estoque.
+
+Permita:
+
+- cadastrar touro;
+- buscar touro existente;
+- editar informações;
+- visualizar pedigree;
+- visualizar características;
+- visualizar avaliação genética;
+- adicionar doses;
+- retirar doses;
+- registrar fornecedor;
+- lote;
+- tipo de sêmen;
+- preço;
+- observações.
+
+Tipos podem incluir:
+
+- convencional;
+- sexado;
+- outros configuráveis.
+
+Página principal:
+
+```text
+TOURO
+RAÇA
+REGISTRO
+FORNECEDOR
+DOSES
+CUSTO/Dose
+STATUS
+```
+
+Na ficha do touro, mostre claramente:
+
+- características genéticas;
+- dataset de origem;
+- versão da avaliação;
+- acurácia;
+- percentil;
+- pedigree;
+- estoque.
+
+Não permita estoque negativo.
+
+Movimentações devem ficar registradas.
+
+Crie um histórico simples de movimentações de estoque.
+
+Prepare a camada de domínio para futuramente integrar catálogos externos, mas não implemente scraping.
+
+---
+
+# PROMPT 8 — Motor de acasalamento MVP
+
+Agora implemente a primeira versão do coração do software:
+
+# Acasalamentos
+
+IMPORTANTE:
+
+O motor deve ser transparente, determinístico e auditável.
+
+Não use IA/LLM para escolher touros.
+
+Não invente modelos científicos.
+
+O motor somente poderá calcular uma característica quando existir informação suficiente e metodologia explicitamente suportada.
+
+Fluxo:
+
+1. usuário escolhe uma matriz;
+2. escolhe os touros candidatos;
+3. escolhe um perfil de objetivo;
+4. define pesos;
+5. sistema valida compatibilidade das avaliações;
+6. aplica filtros;
+7. calcula os componentes permitidos;
+8. gera ranking;
+9. salva um snapshot completo do cálculo.
+
+Perfis iniciais podem ser:
+
+- Personalizado;
+- Demonstração Corte;
+- Demonstração Leite.
+
+Os perfis de demonstração devem estar explicitamente marcados:
+
+`DEMO — NÃO REPRESENTA RECOMENDAÇÃO ZOOTÉCNICA VALIDADA`
+
+Permita editar todos os pesos.
+
+O motor deverá possuir pipeline semelhante a:
+
+```text
+Candidate
+   ↓
+Validation
+   ↓
+Hard Filters
+   ↓
+Trait Compatibility
+   ↓
+Normalization
+   ↓
+Weighted Components
+   ↓
+Complementarity
+   ↓
+Penalties
+   ↓
+Final Score
+```
+
+Crie interfaces Go bem separadas para cada etapa.
+
+Exemplo conceitual:
+
+```go
+type ScoringComponent interface {
+    Calculate(ctx CalculationContext) ComponentResult
+}
+```
+
+Cada `ComponentResult` deve guardar:
+
+- nome;
+- valor de entrada;
+- transformação;
+- peso;
+- contribuição;
+- fonte;
+- explicação;
+- warnings.
+
+NUNCA faça algo como:
+
+```text
+score = número mágico
+```
+
+sem registrar de onde veio.
+
+Para normalização:
+
+- quando houver percentil válido e comparável, permita uma transformação documentada;
+- quando houver parâmetros populacionais fornecidos pelo dataset, prepare suporte a normalização estatística;
+- se não houver parâmetros suficientes, informe que não é possível calcular aquela parte.
+
+Não converta avaliações de bases incompatíveis como se fossem equivalentes.
+
+Se matriz e touro estiverem em avaliações incompatíveis:
+
+```text
+⚠ Comparação genética não suportada entre essas bases.
+```
+
+Para o MVP, é preferível retornar `não calculável` do que produzir um número falso.
+
+Crie:
+
+- ranking;
+- Top candidatos;
+- filtros;
+- warnings;
+- snapshot;
+- versão do motor;
+- dataset IDs e versões utilizados.
+
+Adicione muitos testes unitários com dados sintéticos.
+
+---
+
+# PROMPT 9 — Ver cálculo
+
+Agora implemente uma das principais funcionalidades de UX:
+
+# VER CÁLCULO
+
+Todo resultado de acasalamento deve possuir:
+
+`Ver cálculo`
+
+Ao clicar, abrir uma tela/modal/drawer detalhado.
+
+Exemplo:
+
+```text
+Matriz 0472 × Touro A
+
+Score final
+87,43 / 100
+```
+
+Depois decompor:
+
+```text
+COMPONENTES
+
+Fertilidade
+Score normalizado: 82
+Peso: 30%
+Contribuição: 24,60
+
+Carcaça
+Score normalizado: 91
+Peso: 25%
+Contribuição: 22,75
+
+Maternal
+Score normalizado: 76
+Peso: 20%
+Contribuição: 15,20
+```
+
+Depois:
+
+```text
+COMPLEMENTARIDADE
++4,10
+
+PENALIDADES
+-2,30
+```
+
+Resultado:
+
+```text
+64,00
++4,10
+-2,30
+=65,80
+```
+
+Use os números reais do snapshot, não recalculados pelo frontend.
+
+Para cada componente deve existir:
+
+`Como chegamos nisso?`
+
+Abrindo:
+
+- valor da matriz;
+- valor do touro;
+- tipo da avaliação;
+- dataset;
+- versão;
+- unidade;
+- transformação;
+- fórmula/método;
+- peso;
+- resultado.
+
+Crie também:
+
+# Dados usados neste cálculo
+
+Exemplo:
+
+```text
+Dataset:
+Nelore Example
+
+Versão:
+2026.1
+
+Motor:
+0.1.0
+
+Configuração:
+Personalizada
+
+Executado em:
+11/10/2026
+```
+
+Se algum valor for DEMO:
+
+mostrar claramente.
+
+Não permita que um cálculo histórico mude silenciosamente quando um dataset for atualizado.
+
+Use o snapshot salvo.
+
+---
+
+# PROMPT 10 — Página Cálculos
+
+Agora implemente a página global:
+
+# Cálculos
+
+Ela não mostra apenas os cálculos de um acasalamento específico.
+
+Ela deve funcionar como a documentação matemática e científica interna do software.
+
+Quero duas visualizações:
+
+## Modo simples
+
+Explicações voltadas para produtor/usuário comum.
+
+## Modo técnico
+
+Detalhes para veterinários, zootecnistas, pesquisadores e usuários avançados.
+
+Crie capítulos:
+
+### 1. Score de acasalamento
+
+Explique a estrutura geral:
+
+```text
+componentes ponderados
++ complementaridade
+- penalidades
+= score final
+```
+
+Deixe claro que quais componentes existem depende dos datasets e configurações ativas.
+
+### 2. Pesos
+
+Explique:
+
+```text
+score_trait × peso
+```
+
+E mostre um exemplo sintético.
+
+### 3. Normalização
+
+Explique por que:
+
+```text
+kg
+cm²
+percentil
+índice
+```
+
+não podem ser somados diretamente.
+
+Explique quais normalizações o MVP suporta de verdade.
+
+Não documente algoritmo não implementado.
+
+### 4. MAXIMIZE
+
+### 5. MINIMIZE
+
+### 6. TARGET_RANGE
+
+Explique a diferença.
+
+### 7. Acurácia
+
+Explique que mérito genético e confiabilidade são conceitos diferentes.
+
+Caso o MVP utilize acurácia na pontuação, documente exatamente como.
+
+Caso não utilize, diga que atualmente é exibida apenas como informação.
+
+### 8. Complementaridade
+
+Explique que o objetivo não é simplesmente buscar “o maior touro”, e sim identificar como o touro complementa determinada matriz.
+
+### 9. Pedigree
+
+Explique os algoritmos efetivamente existentes.
+
+### 10. Parentesco / endogamia
+
+Se o cálculo formal ainda não estiver implementado:
+
+mostrar:
+
+`Planejado — ainda não utilizado no score do MVP`.
+
+Não simule uma fórmula falsa.
+
+### 11. Progênie esperada
+
+Somente documente cálculos que estiverem realmente implementados e cientificamente apropriados para o tipo de avaliação.
+
+Explique que DEP, EBV e PTA não devem ser tratados cegamente como a mesma escala.
+
+### 12. Datasets
+
+Explique:
+
+```text
+Dataset A
+≠
+Dataset B
+```
+
+e que a comparabilidade depende de:
+
+- raça;
+- programa;
+- release;
+- base genética;
+- trait;
+- unidade;
+- metodologia.
+
+### 13. Reprodutibilidade
+
+Explique:
+
+- versão do motor;
+- versão do dataset;
+- snapshot;
+- configurações utilizadas.
+
+Coloque links internos da página `Ver cálculo` para a seção correspondente da documentação.
+
+A página deve ser bonita e didática, não apenas um Markdown bruto.
+
+---
+
+# PROMPT 11 — Backup, segurança, qualidade e fechamento do MVP
+
+Agora feche tecnicamente o MVP.
+
+Implemente:
+
+# Backup
+
+Botão:
+
+`Criar backup`
+
+Formato próprio, por exemplo:
+
+```text
+2026-10-11-fazenda.genbackup
+```
+
+O backup deverá conter:
+
+- `farm.db`;
+- configuração necessária;
+- datasets particulares necessários;
+- metadados das versões de bibliotecas públicas;
+- anexos/fotos se existirem.
+
+Implemente:
+
+`Restaurar backup`
+
+Antes de restaurar:
+
+- validar arquivo;
+- verificar versão;
+- verificar integridade;
+- criar backup automático de segurança da base atual;
+- nunca sobrescrever silenciosamente.
+
+Proteja contra ZIP traversal se o formato usar arquivo compactado.
+
+# Integridade
+
+Adicione verificações para:
+
+- SQLite corrompido;
+- migration incompleta;
+- dataset ausente;
+- versão incompatível;
+- referências quebradas;
+- cálculo histórico apontando para dataset removido.
+
+# Qualidade
+
+Revise:
+
+- erros Go;
+- tratamento de promises no React;
+- estados vazios;
+- loaders;
+- acessibilidade básica;
+- atalhos de teclado quando fizer sentido;
+- formulários;
+- responsividade para notebook;
+- performance de listas maiores.
+
+Adicione testes para:
+
+- repositories;
+- datasets;
+- scoring;
+- snapshots;
+- backup/restauração;
+- pedigree;
+- estoque.
+
+Rode:
+
+- testes Go;
+- testes frontend existentes;
+- lint;
+- TypeScript;
+- build frontend;
+- build Wails possível no ambiente.
+
+Não ignore erros para fazer o build passar.
+
+Crie:
+
+`docs/MVP_STATUS.md`
+
+contendo:
+
+```text
+IMPLEMENTADO
+PARCIAL
+NÃO IMPLEMENTADO
+LIMITAÇÕES
+PRÓXIMAS ETAPAS
+```
+
+Se alguma funcionalidade estiver apenas mockada, deixe isso explícito.
+
+O MVP não deve fingir possuir validação zootécnica que ainda não possui.
+
+---
+
+# PROMPT 12 — Auditoria final, conceito completo e plano pós-MVP
+
+Este é o último prompt desta primeira etapa.
+
+Não quero simplesmente mais funcionalidades.
+
+Quero que você aja como:
+
+- arquiteto de software;
+- engenheiro Go;
+- desenvolvedor React;
+- especialista em modelagem de dados;
+- revisor de produto.
+
+Primeiro, inspecione TODO o projeto atual.
+
+Entenda o produto antes de alterar código.
+
+# CONCEITO FINAL DO PRODUTO
+
+Estamos construindo uma plataforma desktop, local-first, aberta e auditável para planejamento de melhoramento genético bovino.
+
+O sistema deve permitir que um produtor, técnico, veterinário ou zootecnista:
+
+```text
+cadastre o rebanho
+        ↓
+mantenha pedigree
+        ↓
+registre fenótipos
+        ↓
+instale datasets/bibliotecas
+        ↓
+importe avaliações genéticas
+        ↓
+mantenha touros e estoque de sêmen
+        ↓
+escolha uma matriz
+        ↓
+defina objetivos genéticos
+        ↓
+compare touros compatíveis
+        ↓
+receba ranking
+        ↓
+abra "Ver cálculo"
+        ↓
+entenda exatamente como a conclusão foi produzida
+```
+
+Existem quatro princípios fundamentais.
+
+## 1. LOCAL-FIRST
+
+O rebanho pertence ao usuário.
+
+O software deve continuar funcionando offline.
+
+A ausência de internet não pode impedir:
+
+- cadastro;
+- consulta;
+- pedigree;
+- análises com dados já disponíveis;
+- acasalamentos;
+- relatórios;
+- consulta a cálculos anteriores.
+
+Serviços externos são complementares.
+
+---
+
+## 2. DATASETS COMO BIBLIOTECAS
+
+O conhecimento genético não deve ficar hardcoded.
+
+O sistema deverá evoluir através de datasets/bibliotecas instaláveis.
+
+Conceitualmente:
+
+```text
+                 BIBLIOTECAS
+                      ↓
+                 TRAITS
+                      ↓
+               MOTOR GENÉTICO
+                      ↓
+     ┌────────────────┼────────────────┐
+     ↓                ↓                ↓
+ PEDIGREE         FENÓTIPO         GENÉTICA
+     └────────────────┼────────────────┘
+                      ↓
+                 ACASALAMENTO
+                      ↓
+                    SCORE
+                      ↓
+                VER CÁLCULO
+```
+
+A distribuição oficial deverá utilizar somente datasets cuja licença permita a utilização pretendida.
+
+Se forem redistribuídos junto ao programa, a licença deverá permitir redistribuição.
+
+Dados simplesmente “gratuitos para consultar” não devem ser considerados automaticamente livres para redistribuição.
+
+Usuários poderão instalar bases adicionais pelas quais tenham autorização.
+
+---
+
+## 3. NÃO SER CAIXA-PRETA
+
+Qualquer recomendação importante deve possuir:
+
+`Ver cálculo`
+
+O sistema precisa conseguir responder:
+
+### Qual touro foi recomendado?
+
+Ranking.
+
+### Por quê?
+
+Explicação.
+
+### Como chegou àquela nota?
+
+Detalhamento matemático.
+
+### Quais dados foram utilizados?
+
+Dataset + versão + valores.
+
+### De onde vieram?
+
+Proveniência.
+
+### Qual versão do algoritmo fez isso?
+
+Engine version.
+
+---
+
+## 4. NÃO INVENTAR CIÊNCIA
+
+Se determinada comparação não puder ser feita corretamente:
+
+```text
+Não calculável com os dados disponíveis.
+```
+
+é uma resposta válida.
+
+Nunca trocar isso por um número aparentemente preciso.
+
+DEP, EPD, EBV, PTA, fenótipos e índices não devem ser tratados automaticamente como equivalentes.
+
+Avaliações de diferentes programas não devem ser comparadas sem metodologia válida.
+
+---
+
+# AUDITORIA
+
+Revise se a arquitetura atual respeita esses quatro princípios.
+
+Procure:
+
+- acoplamentos;
+- SQL no frontend;
+- números mágicos;
+- lógica genética hardcoded;
+- dados DEMO sem identificação;
+- datasets sem proveniência;
+- perda de versionamento;
+- cálculos históricos não reproduzíveis;
+- tratamentos silenciosos de incompatibilidade;
+- bugs;
+- duplicações;
+- tipos inseguros;
+- problemas de migration;
+- problemas de concorrência;
+- problemas no SQLite;
+- problemas de UX.
+
+Corrija problemas importantes encontrados.
+
+Não faça refatoração destrutiva apenas por estética.
+
+---
+
+# APÓS O MVP
+
+Crie um documento:
+
+`docs/ROADMAP_POST_MVP.md`
+
+O documento deverá explicar como evoluir o sistema progressivamente.
+
+Organize aproximadamente nestas fases:
+
+# FASE A — Validação científica
+
+Antes de ampliar o número de features:
+
+- trabalhar com zootecnista/geneticista;
+- validar traits;
+- validar pesos;
+- validar índices;
+- validar normalizações;
+- validar penalidades;
+- validar interpretação das avaliações;
+- documentar referências científicas;
+- criar testes com casos conhecidos.
+
+A meta não é ter mais telas.
+
+A meta é garantir que as recomendações tenham significado técnico.
+
+---
+
+# FASE B — Primeiro pacote real
+
+Escolher UMA raça/finalidade primeiro.
+
+Sugestão:
+
+```text
+Nelore / Corte
+```
+
+ou:
+
+```text
+Gir / Leite
+```
+
+Encontrar somente fontes:
+
+- gratuitas;
+- legalmente utilizáveis;
+- com licença conhecida;
+- compatíveis com a distribuição pretendida.
+
+Criar o primeiro `.genlib` real.
+
+Validá-lo tecnicamente.
+
+---
+
+# FASE C — Motor de pedigree profissional
+
+Implementar formalmente:
+
+- matriz de parentesco;
+- coeficiente de relacionamento;
+- coeficiente de endogamia;
+- ancestrais comuns;
+- completude de pedigree;
+- profundidade;
+- alertas.
+
+Documentar fórmulas e referências na página Cálculos.
+
+---
+
+# FASE D — Genômica
+
+Preparar suporte para:
+
+- informações genômicas;
+- haplótipos;
+- recessivos;
+- condições genéticas;
+- incompatibilidades.
+
+Resultado possível:
+
+```text
+Touro X × Matriz Y
+
+Risco recessivo detectado
+→ combinação bloqueada/alertada
+```
+
+As regras deverão vir das fontes apropriadas.
+
+---
+
+# FASE E — Mais raças
+
+Não duplicar o software.
+
+Adicionar bibliotecas.
+
+Exemplo:
+
+```text
+Nelore
+↓
+Gir
+↓
+Guzerá
+↓
+Sindi
+↓
+Brahman
+↓
+Tabapuã
+↓
+Holandês
+↓
+Jersey
+↓
+Angus
+↓
+Hereford
+...
+```
+
+O motor permanece genérico.
+
+---
+
+# FASE F — Integrações
+
+Criar uma abstração:
+
+```go
+type GeneticDataProvider interface {
+    SearchAnimal(...)
+    GetPedigree(...)
+    GetEvaluations(...)
+}
+```
+
+Assim poderemos futuramente possuir:
+
+```text
+Provider A
+Provider B
+Provider C
+```
+
+sem colocar dependência externa dentro do domínio.
+
+Nunca basear o funcionamento offline do programa nessas APIs.
+
+---
+
+# FASE G — Otimização do rebanho inteiro
+
+Hoje:
+
+```text
+1 matriz
+×
+N touros
+```
+
+Futuro:
+
+```text
+N matrizes
+×
+M touros
+×
+estoque limitado
+×
+restrições
+```
+
+Exemplo:
+
+```text
+423 matrizes
+
+Touro A — 100 doses
+Touro B — 80 doses
+Touro C — 150 doses
+Touro D — 70 doses
+```
+
+O sistema deve encontrar uma distribuição global adequada.
+
+Isso passa a ser um problema formal de otimização.
+
+Investigar técnicas como:
+
+- programação linear inteira;
+- constraint programming;
+- otimização multiobjetivo.
+
+Restrições podem incluir:
+
+- disponibilidade de doses;
+- parentesco;
+- endogamia máxima;
+- preço;
+- parto;
+- genética;
+- características;
+- objetivos do rebanho.
+
+---
+
+# FASE H — Índice econômico
+
+Permitir que o produtor deixe de pensar somente em:
+
+```text
+genética
+```
+
+e passe também a analisar:
+
+```text
+retorno econômico esperado.
+```
+
+Exemplos:
+
+- leite;
+- sólidos;
+- fertilidade;
+- longevidade;
+- carcaça;
+- eficiência;
+- custo de sêmen.
+
+Nunca inventar valores econômicos universais.
+
+Eles deverão ser provenientes de biblioteca ou configuração do usuário.
+
+---
+
+# FASE I — Evolução genética do rebanho
+
+Criar dashboards mostrando:
+
+```text
+2026
+↓
+2027
+↓
+2028
+↓
+2029
+```
+
+para cada trait.
+
+Mostrar:
+
+- tendência genética;
+- tendência fenotípica;
+- ganho esperado;
+- ganho observado;
+- diversidade;
+- endogamia.
+
+Separar sempre fenótipo de mérito genético.
+
+---
+
+# FASE J — Importação em massa
+
+Permitir:
+
+```text
+CSV
+XLSX
+JSON
+API
+```
+
+com:
+
+- mapeamento;
+- preview;
+- validação;
+- deduplicação;
+- rollback;
+- relatório de erros.
+
+Isso será necessário em propriedades maiores.
+
+---
+
+# FASE K — Relatórios profissionais
+
+Gerar relatórios:
+
+- planejamento de acasalamento;
+- matriz individual;
+- touro;
+- pedigree;
+- risco genético;
+- evolução do rebanho;
+- sêmen necessário;
+- diversidade genética;
+- metodologia e datasets utilizados.
+
+Cada relatório deverá conseguir mostrar sua proveniência.
+
+---
+
+# FASE L — Ecossistema de bibliotecas
+
+No longo prazo, o sistema poderá ter um catálogo de datasets.
+
+Exemplo:
+
+```text
+Bibliotecas disponíveis
+
+Nelore Genetics
+[ Instalar ]
+
+Dairy Conformation
+[ Instalar ]
+
+Carcass Reference
+[ Instalar ]
+```
+
+O catálogo não precisa hospedar obrigatoriamente o conteúdo.
+
+Ele pode apontar para fontes autorizadas.
+
+Instituições e pesquisadores poderão futuramente produzir seus próprios `.genlib`.
+
+---
+
+# FASE M — Sincronização opcional
+
+Somente depois do produto local estar consolidado, considerar:
+
+```text
+backup criptografado em nuvem
+sincronização entre computadores
+times
+fazendas múltiplas
+compartilhamento com veterinário/zootecnista
+```
+
+O software não deverá passar a depender da nuvem para funcionar.
+
+---
+
+# FASE N — IA, SOMENTE DEPOIS
+
+IA não deverá substituir o motor matemático.
+
+Uso futuro aceitável:
+
+```text
+dados + cálculo determinístico
+              ↓
+            IA
+              ↓
+explicação em linguagem natural
+```
+
+Exemplo:
+
+> O Touro A foi favorecido principalmente por melhorar as características X e Y da matriz, mantendo baixo risco de parentesco.
+
+A IA explica.
+
+Ela não inventa o score.
+
+---
+
+# RESULTADO DESTA AUDITORIA
+
+Ao terminar:
+
+1. corrija problemas críticos encontrados;
+2. rode todos os testes;
+3. rode lint/typecheck;
+4. valide build;
+5. atualize documentação;
+6. crie `ROADMAP_POST_MVP.md`;
+7. crie `ARCHITECTURE_FINAL.md`;
+8. crie `SCIENTIFIC_LIMITATIONS.md`;
+9. crie `DATASET_FORMAT.md`;
+10. crie `CALCULATION_ENGINE.md`.
+
+No `ARCHITECTURE_FINAL.md`, inclua este conceito:
+
+```text
+          DATASETS / BIBLIOTECAS
+                   ↓
+             MOTOR GENÉTICO
+                   ↓
+       ┌───────────┼───────────┐
+       ↓           ↓           ↓
+   PEDIGREE    FENÓTIPO    GENÉTICA
+       └───────────┼───────────┘
+                   ↓
+              ACASALAMENTO
+                   ↓
+                 RANKING
+                   ↓
+       ┌───────────┴───────────┐
+       ↓                       ↓
+ RECOMENDAÇÃO             VER CÁLCULO
+                               ↓
+                    DADOS + MÉTODO + FONTE
+```
+
+Por fim, me entregue um relatório curto contendo:
+
+### Estado do MVP
+O que realmente funciona.
+
+### Limitações
+O que ainda não deve ser utilizado como recomendação genética real.
+
+### Dívidas técnicas
+O que precisa ser resolvido.
+
+### Próximo passo recomendado
+Qual é a próxima implementação mais importante.
+
+### Arquivos principais
+Quais documentos devo ler para continuar o projeto.
+
+Não adicione funcionalidades aleatórias depois desta auditoria.
+
+O objetivo é terminar esta etapa com um **MVP tecnicamente organizado e uma fundação capaz de virar um produto científico sério**.
